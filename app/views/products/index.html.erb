@@ -1,7 +1,7 @@
 <h1>Products Index</h1>
 <% @products.each do |product| %>
 	<p><%= product.name %> (<%= product.price_in_cents %>)</p>
-	<p><%= link_to image_tag(product.url) %></p>
+	<p><%= link_to image_tag(product.url), product_path(product) %></p>
 	<p>Description</p>
 	<p><%= product.description %></p>
 <% end %>
