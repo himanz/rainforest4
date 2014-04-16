@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :ensure_logged_in, :only => [:destroy, :edit]
   def index
   	@products = Product.all
   end
